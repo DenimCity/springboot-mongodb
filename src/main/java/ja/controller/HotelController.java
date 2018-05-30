@@ -27,10 +27,10 @@ public class HotelController {
         List<Hotel> hotels = this.hotelRepository.findAll();
         return hotels;
 
-          // try {
-            
+        // try {
+
         // } catch (Exception e) {
-        //     //TODO: handle exception
+        // //TODO: handle exception
         // }
     }
 
@@ -40,38 +40,41 @@ public class HotelController {
         LOGGER.info("*************************Grabbing One Individual Hotel *************************");
         return hotel;
 
-          // try {
-            
+        // try {
+
         // } catch (Exception e) {
-        //     //TODO: handle exception
+        // //TODO: handle exception
         // }
     }
 
     @PostMapping("/new")
     public Hotel insert(@RequestBody Hotel hotel) {
         LOGGER.info("*************************Creating New Hotel*************************");
-       Hotel createdHotel = this.hotelRepository.insert(hotel);
-        LOGGER.info("*************************Created Hotel*************************");
+        // Practicing Serialization a response body.
+        // Hotel.class.getName().toLowerCase();
+        Hotel createdHotel = this.hotelRepository.insert(hotel);
+        LOGGER.info("*************************Hotel Created *************************");
         return createdHotel;
 
         // try {
-            
+
         // } catch (Exception e) {
-        //     //TODO: handle exception
+        // //TODO: handle exception
         // }
     }
 
     @PutMapping
-    public Hotel updating( @RequestBody Hotel hotel){
+    public Hotel updating(@RequestBody Hotel hotel) {
         LOGGER.info("*************************Updating Hotel*************************");
-        
+
         Hotel updatedHotel = this.hotelRepository.save(hotel);
+        LOGGER.info("*************************House Updated*************************");
         return updatedHotel;
 
         // try {
-            
+
         // } catch (Exception e) {
-        //     //TODO: handle exception
+        // //TODO: handle exception
         // }
     }
 
@@ -79,12 +82,12 @@ public class HotelController {
     public void delete(@PathVariable("id") String id) {
         LOGGER.info("*************************Deleting Hotel*************************");
         this.hotelRepository.deleteById(id);
+        LOGGER.info("*************************House Deleted*************************");
 
-        
-          // try {
-            
+        // try {
+
         // } catch (Exception e) {
-        //     //TODO: handle exception
+        // //TODO: handle exception
         // }
     }
 
