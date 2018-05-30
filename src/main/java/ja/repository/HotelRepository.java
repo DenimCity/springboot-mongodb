@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 import ja.domain.Hotel;
 
 @Repository
-public interface HotelRespository extends MongoRepository<Hotel,String> {
+public interface HotelRepository extends MongoRepository<Hotel,String> {
 
 
+   // void delete(String id);
 }
