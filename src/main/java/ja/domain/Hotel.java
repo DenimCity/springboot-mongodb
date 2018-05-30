@@ -30,9 +30,12 @@ public class Hotel {
         this.name = name;
         this.pricePerNight = pricePerNight;
         this.address = address;
+        this.reviews = reviews;
     }
 
-
+    public String getId(){
+        return id;
+}
     public String getName() {
         return name;
     }
@@ -48,6 +51,7 @@ public class Hotel {
     public List<Review> getReviews(){
         return reviews;
     }
+
 
 
 
