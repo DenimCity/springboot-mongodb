@@ -26,6 +26,12 @@ public class HotelController {
         LOGGER.info("*************************Grabbing all Hotels*************************");
         List<Hotel> hotels = this.hotelRepository.findAll();
         return hotels;
+
+          // try {
+            
+        // } catch (Exception e) {
+        //     //TODO: handle exception
+        // }
     }
 
     @GetMapping("/{id}")
@@ -33,23 +39,53 @@ public class HotelController {
         Optional<Hotel> hotel = this.hotelRepository.findById(id);
         LOGGER.info("*************************Grabbing One Individual Hotel *************************");
         return hotel;
+
+          // try {
+            
+        // } catch (Exception e) {
+        //     //TODO: handle exception
+        // }
     }
 
     @PostMapping("/new")
-    public void insert(@RequestBody Hotel hotel) {
-        LOGGER.info("*************************Creating New Hotels*************************");
-        this.hotelRepository.insert(hotel);
+    public Hotel insert(@RequestBody Hotel hotel) {
+        LOGGER.info("*************************Creating New Hotel*************************");
+       Hotel createdHotel = this.hotelRepository.insert(hotel);
+        LOGGER.info("*************************Created Hotel*************************");
+        return createdHotel;
+
+        // try {
+            
+        // } catch (Exception e) {
+        //     //TODO: handle exception
+        // }
     }
 
     @PutMapping
-    public void updating( @RequestBody Hotel hotel){
-        this.hotelRepository.save(hotel);
+    public Hotel updating( @RequestBody Hotel hotel){
+        LOGGER.info("*************************Updating Hotel*************************");
+        
+        Hotel updatedHotel = this.hotelRepository.save(hotel);
+        return updatedHotel;
+
+        // try {
+            
+        // } catch (Exception e) {
+        //     //TODO: handle exception
+        // }
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") String id) {
         LOGGER.info("*************************Deleting Hotel*************************");
         this.hotelRepository.deleteById(id);
+
+        
+          // try {
+            
+        // } catch (Exception e) {
+        //     //TODO: handle exception
+        // }
     }
 
 }
