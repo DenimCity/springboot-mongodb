@@ -8,6 +8,4 @@ import ja.domain.Hotel;
 @Repository
 public interface HotelRepository extends MongoRepository<Hotel,String> {
 
-
-   // void delete(String id);
 }
