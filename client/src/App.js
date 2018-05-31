@@ -3,13 +3,13 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import './App.css';
 
-
+import NavBar from './Nav/NavBar'
 
 class App extends Component {
   render() {
     return (
         <div>
-            {/*<NavBar/>*/}
+            <NavBar/>
             <Router>
                 <Switch>
                     <Route exact path="/" component={LandingPage}/>
