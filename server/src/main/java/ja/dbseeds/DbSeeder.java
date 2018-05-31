@@ -50,7 +50,6 @@ public class DbSeeder implements CommandLineRunner {
                 Arrays.asList(
                         new Review("Jean", 10, true),
                         new Review("Wella", 8, true)
-
                 )
         );
 
@@ -60,11 +59,6 @@ public class DbSeeder implements CommandLineRunner {
         //add our hotels to the database
         List<Hotel> hotels = Arrays.asList(marriot, ibis, sofitel);
         System.out.println("******************Seeding Database ******************");
-        try {
-        this.hotelRepository.saveAll(hotels);    
-        } catch (Exception e) {
-                System.out.println("Error with saving seeded data: " + e );
-        }
-        System.out.println("******************Saved DB****************");
+        this.hotelRepository.saveAll(hotels);
     }
 }
