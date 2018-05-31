@@ -25,7 +25,7 @@ public class HotelController {
 
     @GetMapping("/")
     public List<Hotel> getall() {
-        LOGGER.info("*************************Grabbing all Hotels*************************");
+        LOGGER.info("SERVER*************************Grabbing all Hotels*************************");
         List<Hotel> hotels = this.hotelRepository.findAll();
         return hotels;
 
@@ -39,7 +39,7 @@ public class HotelController {
     @GetMapping("/{id}")
     public Optional<Hotel> getById(@PathVariable("id") String id) {
         Optional<Hotel> hotel = this.hotelRepository.findById(id);
-        LOGGER.info("*************************Grabbing One Individual Hotel *************************");
+        LOGGER.info("SERVER*************************Grabbing One Individual Hotel *************************");
         return hotel;
 
         // try {
@@ -51,11 +51,11 @@ public class HotelController {
 
     @PostMapping("/new")
     public Hotel insert(@RequestBody Hotel hotel) {
-        LOGGER.info("*************************Creating New Hotel*************************");
+        LOGGER.info("SERVER*************************Creating New Hotel*************************");
         // Practicing Serialization a response body.
         // Hotel.class.getName().toLowerCase();
         Hotel createdHotel = this.hotelRepository.insert(hotel);
-        LOGGER.info("*************************Hotel Created *************************");
+        LOGGER.info("SERVER*************************Hotel Created *************************");
         return createdHotel;
 
         // try {
@@ -67,10 +67,10 @@ public class HotelController {
 
     @PutMapping
     public Hotel updating(@RequestBody Hotel hotel) {
-        LOGGER.info("*************************Updating Hotel*************************");
+        LOGGER.info("SERVER*************************Updating Hotel*************************");
 
         Hotel updatedHotel = this.hotelRepository.save(hotel);
-        LOGGER.info("*************************House Updated*************************");
+        LOGGER.info("SERVER*************************House Updated*************************");
         return updatedHotel;
 
         // try {
@@ -82,9 +82,9 @@ public class HotelController {
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") String id) {
-        LOGGER.info("*************************Deleting Hotel*************************");
+        LOGGER.info("SERVER*************************Deleting Hotel*************************");
         this.hotelRepository.deleteById(id);
-        LOGGER.info("*************************House Deleted*************************");
+        LOGGER.info("SERVER*************************House Deleted*************************");
 
         // try {
 
