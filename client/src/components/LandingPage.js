@@ -18,7 +18,7 @@ class Landing extends Component {
 
   //     ])
   //       apiService.allHotels.then(response => {
-  //         console.log('respone', response)
+  //         console.log('response', response)
   //         const hotels = response.data
 
   //         this.setState({hotels})
