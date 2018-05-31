@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "concurrently \" cd ../server/ && ./mvnw spring-boot:run\" && \" nodemon npm start \" ",
+    "dev": "concurrently \" cd ../server/ && ./mvnw spring-boot:run\" \" npm start \" ",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
