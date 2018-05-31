@@ -10,6 +10,8 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 @RestController
+@CrossOrigin
+
 public class HotelController {
 
     private HotelRepository hotelRepository;
