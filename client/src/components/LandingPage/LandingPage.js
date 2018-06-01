@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import HotelInfo from "./HotelInfo";
-// import * as apiService from '../services/axiosServices'
+import HotelInfo from "./../HotelInfo";
+import * as apiService from '../../services/axiosServices'
+
+import './LandingPage.scss'
 
 class Landing extends Component {
   state = {
@@ -42,7 +44,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        welcome from the landing age
+        <h1 className='header'> welcome from the landing age </h1>
         <HotelInfo hotelinfo={this.state.hotels} />
       </div>
     );
