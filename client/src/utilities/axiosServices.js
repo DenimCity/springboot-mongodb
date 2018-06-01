@@ -22,8 +22,6 @@ export let xyz = (hotel_info) => {
 export let grab_Hotel_Id = hotel_Id => {
   // multiple ways to write it
   return axios.get(baseUrl + "/" + hotel_Id);
-
-  help_me_jean();
   // return axios.get`${baseUrl}/${hotelId}`
 };
 
@@ -36,10 +34,5 @@ export let create_Hotel = hotel_info => {
 export let delete_Hotel = hotel_Id => {
   return axios.delete(baseUrl + "/" + hotel_Id);
 };
-function help_me_jean() {
-  help();
-  help();
-  help();
-  help();
-}
+
 
