@@ -8,9 +8,10 @@ export default class HotelInfo extends Component  {
         <div>
             <div>
         
-                {this.props.hotel_info.map((hotel,i)=> {
-                return( <h5 key={i}>{hotel.name}</h5>)
-                })}
+                {this.props.hotel_info.map((hotel,i) => (
+                 <h5 key={i}>{hotel.name} {hotel.address.city}</h5>)
+                
+                )}
             </div>
         </div>
     );
