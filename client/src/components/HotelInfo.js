@@ -7,13 +7,16 @@ export default class HotelInfo extends Component  {
     return (
         <div>
             <div>
-                {this.props.hotelinfo.map((hotel,i)=> {
-                    return( <h5 key={i}>{hotel.name}</h5>)
+        
+                {this.props.hotel_info.map((hotel,i)=> {
+                return( <h5 key={i}>{hotel.name}</h5>)
                 })}
             </div>
-            
         </div>
     );
 }
 }
+
+
+
 

@@ -45,7 +45,7 @@ class Landing extends Component {
     return (
       <div>
         <h1 className='header'> welcome from the landing age </h1>
-        <HotelInfo hotelinfo={this.state.hotels} />
+        <HotelInfo hotel_info={this.state.hotels} />
       </div>
     );
   }
